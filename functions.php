@@ -52,7 +52,8 @@ if (!function_exists('astabud_setup')) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__('Primary', 'astabud'),
+				'menu-1' => esc_html__('Primary menu', 'astabud'),
+				'footer' => esc_html__('Footer menu', 'astabud'),
 			)
 		);
 

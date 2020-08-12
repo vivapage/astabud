@@ -42,12 +42,14 @@ gulp.task("styles", function () {
 
 // Обьединяем файлы скриптов, сжимаем и переменовываем
 gulp.task("scripts", function () {
-  return gulp
-    .src("./scripts/*.js")
-    .pipe(concat("./../js/scripts.min.js"))
-    .pipe(uglify()) // Mifify js (opt.)
-    .pipe(gulp.dest("./js"))
-    .pipe(browsersync.reload({ stream: true }));
+  return (
+    gulp
+      .src("./scripts/*.js")
+      .pipe(concat("./../js/scripts.min.js"))
+      //.pipe(uglify()) // Mifify js (opt.)
+      .pipe(gulp.dest("./js"))
+      .pipe(browsersync.reload({ stream: true }))
+  );
 });
 
 gulp.task("php", function () {

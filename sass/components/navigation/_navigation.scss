@@ -1,109 +1,205 @@
 .main-navigation {
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+  ul {
+    display: none;
+    list-style: none;
+    margin: 18px 0 0 0;
+    padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+    ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 100%;
+      left: -999em;
+      z-index: 99999;
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
+      ul {
+        left: -999em;
+        top: 0;
+      }
 
-			li {
+      li {
+        &:hover > ul,
+        &.focus > ul {
+          display: block;
+          left: auto;
+        }
+      }
 
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
+      a {
+        width: 200px;
+      }
 
-			a {
-				width: 200px;
-			}
+      :hover > a,
+      .focus > a {
+      }
 
-			:hover > a,
-			.focus > a {
-			}
+      a:hover,
+      a.focus {
+      }
+    }
 
-			a:hover,
-			a.focus {
-			}
-		}
+    li:hover > ul,
+    li.focus > ul {
+      left: auto;
+    }
+  }
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
+  li {
+    position: relative;
 
-	li {
-		position: relative;
+    &:hover > a,
+    &.focus > a {
+    }
+  }
 
-		&:hover > a,
-		&.focus > a {
-		}
-	}
+  a {
+    display: block;
+    text-decoration: none;
+  }
 
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a,
+  .current-menu-ancestor > a {
+  }
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+  display: block;
 }
 
 @media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none;
+  }
 
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
+  .main-navigation ul {
+    display: flex;
+  }
 }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+  .site-main & {
+    margin: 0 0 1.5em;
+  }
 
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
+  .nav-links {
+    display: flex;
+  }
 
-	.nav-links {
-		display: flex;
-	}
+  .nav-previous {
+    flex: 1 0 50%;
+  }
 
-	.nav-previous {
-		flex: 1 0 50%;
-	}
+  .nav-next {
+    text-align: end;
+    flex: 1 0 50%;
+  }
+}
+/*
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(./images/fon-menu.svg);
+  background-position: right;
+  background-size: cover;
+  height: 55px;
+}
 
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
+.main-navigation ul li {
+  display: block;
+  position: relative;
+  width: auto;
+  &:after {
+    content: "";
+    display: block;
+    background-image: url(./images/line.svg);
+    background-size: 56px 56px;
+    height: 55px;
+    width: 56px;
+    float: right;
+  }
+}
+*/
+.main-navigation a {
+  color: $color__text-invert;
+  font-weight: 500;
+  //float: left;
+  margin: 0 15px 0 0;
+}
+
+.main-navigation .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header#masthead.site-header.sticky div#navbar.nav-wrap {
+  background: #fff;
+  opacity: 0.9;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.23);
+  color: $color__text-main;
+  a {
+    color: $color__text-main;
+  }
+}
+
+header#masthead.site-header.nofront div#navbar.nav-wrap {
+  background: #fff;
+  opacity: 1;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.23);
+  color: $color__text-main;
+  a {
+    color: $color__text-main;
+  }
+}
+
+div#navbar.nav-wrap div.container div.logo-menu {
+  display: block;
+  //height: 50px;
+  width: 100px;
+  margin: 5px 5px 5px 0;
+  img {
+    display: none;
+  }
+}
+
+header#masthead.site-header.sticky
+  div#navbar.nav-wrap
+  div.container
+  div.logo-menu {
+  display: block;
+  //height: 50px;
+  width: 100px;
+  margin: 5px 5px 5px 0;
+  img {
+    display: block;
+  }
+}
+
+header#masthead.site-header.nofront
+  div#navbar.nav-wrap
+  div.container
+  div.logo-menu {
+  display: block;
+  //height: 50px;
+  width: 100px;
+  margin: 5px 5px 5px 0;
+  img {
+    display: block;
+  }
+}
+
+.menu-osnovnoe-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
