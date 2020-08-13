@@ -33,12 +33,13 @@
 
       <nav id="site-navigation" class="main-navigation">
         <div id="navbar" class="nav-wrap">
+          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">menu</button>
 
           <div class="container">
             <div class="logo-menu"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img
                   src="<?php echo get_template_directory_uri(); ?>/images/logo-top.svg" alt=""></a>
             </div>
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">menu</button>
+
             <?php
             wp_nav_menu(
               array(
@@ -60,7 +61,7 @@
         <?php if (is_front_page()) {; ?>
 
         <div class="fullscreen-video-wrap">
-          <video autoplay muted src="<?php echo get_template_directory_uri(); ?>/images/header.mp4">
+          <video autoplay muted playsinline src="<?php echo get_template_directory_uri(); ?>/images/header.mp4">
           </video>
         </div>
         <?php }; ?>

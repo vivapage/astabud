@@ -30,9 +30,7 @@
         ));
         ?></div>
       <div class="site-info-item contact">
-        <div class="phone">067 242 0694<br />
-          095 698 6212<br />
-          067 334 7353</div>
+        <div class="phone">+38 (067) 33 47 353</div>
         <div class="email"><a href="mailto: astabud.service@gmail.com">astabud.service@gmail.com</a></div>
         <div class="address"><?php _e('Kyiv, street Solomyanska, 3 <br/> office. 927', 'astabud'); ?></div>
 

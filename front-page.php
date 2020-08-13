@@ -17,7 +17,7 @@ get_header();
 ?>
 <main id="primary" class="site-main">
   <div class="container">
-    <div class="services">
+    <div class="services anim-items down anim-show">
       <div class="services-item">
         <div class="services-img">
           <img src="<?php echo get_template_directory_uri(); ?>/images/service-01.svg" alt="">
@@ -43,7 +43,7 @@ get_header();
         </div>
       </div>
     </div>
-    <div class="services">
+    <div class="services anim-items anim-show down">
       <div class="services-item">
         <div class="services-img">
           <img src="<?php echo get_template_directory_uri(); ?>/images/service-04.svg" alt="">
@@ -74,7 +74,7 @@ get_header();
     <div class="container">
       <div class="block-image-items">
         <div class="item"></div>
-        <div class="item">
+        <div class="item anim-items anim-show right">
           <?php _e('<p>Our company was founded in 2015 and is a full cycle construction company.</p>
 					<p>Competently built organizational structure of the enterprise in alliance with a young, purposeful team of specialists with a high level of professional skills, theoretical knowledge and serious practical experience in their application, allows our company to create optimal, most comfortable working conditions for each client.</p>', 'astabud'); ?>
         </div>
@@ -87,7 +87,7 @@ get_header();
     <div class="container">
       <div class="block-image-items">
 
-        <div class="item">
+        <div class="item anim-items anim-show left">
           <?php _e('<p>Strict quality control and strict adherence to the technological process at each stage of our work allows us to effectively manage resources and time, as well as to comply with all conditions of all contractual relations.</p>
 					<p>We are actively developing and to date have succeeded in many areas of activity, as well as well-established as a confident strategic partner and reliable general contractor.</p>', 'astabud'); ?>
         </div>

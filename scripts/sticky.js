@@ -9,7 +9,7 @@ var navbar = document.getElementById("masthead");
 // Get the offset position of the navbar
 
 var sticky = document.getElementById("masthead").offsetHeight / 3;
-//console.log(sticky);
+console.log(sticky);
 
 window.addEventListener("resize", function () {
   var sticky = document.getElementById("masthead").offsetHeight / 3;

@@ -18,13 +18,17 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
+	//background: $color__background-pre;
+	font-family: $font__main;
+	//line-height: $font__line-height-pre;
+	//margin-bottom: 1.6em;
+	//max-width: 100%;
+	//overflow: auto;
+	//padding: 1.6em;
+	p {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 code,

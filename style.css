@@ -146,11 +146,6 @@ hr {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
 /* Text-level semantics
 	 ========================================================================== */
 /**
@@ -467,13 +462,12 @@ address {
 }
 
 pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", courier, monospace;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.6em;
+  font-family: "Montserrat", sans-serif;
+}
+
+pre p {
+  margin: 0;
+  padding: 0;
 }
 
 code,
@@ -520,6 +514,12 @@ body {
   line-height: 0;
   -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 767px) {
+  .v-header {
+    min-height: 0;
+  }
 }
 
 video {
@@ -773,6 +773,7 @@ video {
 }
 
 .services-item {
+  overflow: hidden;
   width: 33.3%;
 }
 
@@ -785,6 +786,44 @@ video {
 
 .services-text {
   margin-right: 20px;
+}
+
+.anim-show.left {
+  -webkit-transform: translate(-120%, 0px);
+      -ms-transform: translate(-120%, 0px);
+          transform: translate(-120%, 0px);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.anim-show.right {
+  -webkit-transform: translate(120%, 0px);
+      -ms-transform: translate(120%, 0px);
+          transform: translate(120%, 0px);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.anim-show.down {
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.anim-show.active,
+.active .anim-show {
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 @media only screen and (max-width: 767px) {
@@ -856,6 +895,7 @@ video {
   font-size: 16px;
   font-weight: 700;
   line-height: 28px;
+  overflow: hidden;
 }
 
 .block-image-items .item {
@@ -1107,6 +1147,10 @@ h3.heading {
   color: #fff7e7;
 }
 
+div.container div.logo-menu img {
+  height: 50px;
+}
+
 hr {
   background-color: #3e3e3b;
   border: 0;
@@ -1165,15 +1209,15 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #dbae58;
 }
 
 a:visited {
-  color: #800080;
+  color: #3e3e3b;
 }
 
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #3e3e3b;
 }
 
 a:focus {
@@ -1192,8 +1236,7 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #3e3e3b;
+  border-radius: 5px;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1;
   padding: 0.6em 1em 0.4em;
@@ -1236,6 +1279,8 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 3px;
+  margin: 0 10px;
+  width: 90%;
 }
 
 input[type="text"]:focus,
@@ -1262,7 +1307,7 @@ select {
 }
 
 textarea {
-  width: 100%;
+  width: 90%;
 }
 
 /*--------------------------------------------------------------
@@ -1507,39 +1552,29 @@ div#navbar.nav-wrap div.container div.logo-menu img {
   display: none;
 }
 
-header#masthead.site-header.sticky
-div#navbar.nav-wrap
-div.container
-div.logo-menu {
+header#masthead.site-header.sticky div#navbar.nav-wrap div.container div.logo-menu {
   display: block;
   width: 100px;
   margin: 5px 5px 5px 0;
 }
 
-header#masthead.site-header.sticky
-div#navbar.nav-wrap
-div.container
-div.logo-menu img {
+header#masthead.site-header.sticky div#navbar.nav-wrap div.container div.logo-menu img {
   display: block;
 }
 
-header#masthead.site-header.nofront
-div#navbar.nav-wrap
-div.container
-div.logo-menu {
+header#masthead.site-header.nofront div#navbar.nav-wrap div.container div.logo-menu {
   display: block;
   width: 100px;
   margin: 5px 5px 5px 0;
 }
 
-header#masthead.site-header.nofront
-div#navbar.nav-wrap
-div.container
-div.logo-menu img {
+header#masthead.site-header.nofront div#navbar.nav-wrap div.container div.logo-menu img {
   display: block;
 }
 
-.menu-osnovnoe-container {
+.menu-osnovnoe-container,
+.menu-osnovnoe-ru-container,
+.menu-osnovnoe-en-container {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;

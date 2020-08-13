@@ -172,10 +172,7 @@ div#navbar.nav-wrap div.container div.logo-menu {
   }
 }
 
-header#masthead.site-header.sticky
-  div#navbar.nav-wrap
-  div.container
-  div.logo-menu {
+header#masthead.site-header.sticky div#navbar.nav-wrap div.container div.logo-menu {
   display: block;
   //height: 50px;
   width: 100px;
@@ -185,10 +182,7 @@ header#masthead.site-header.sticky
   }
 }
 
-header#masthead.site-header.nofront
-  div#navbar.nav-wrap
-  div.container
-  div.logo-menu {
+header#masthead.site-header.nofront div#navbar.nav-wrap div.container div.logo-menu {
   display: block;
   //height: 50px;
   width: 100px;
@@ -198,7 +192,9 @@ header#masthead.site-header.nofront
   }
 }
 
-.menu-osnovnoe-container {
+.menu-osnovnoe-container,
+.menu-osnovnoe-ru-container,
+.menu-osnovnoe-en-container {
   width: 100%;
   display: flex;
   justify-content: flex-end;
