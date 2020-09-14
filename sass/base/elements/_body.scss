@@ -65,7 +65,17 @@ video {
   margin-right: 10px;
 }
 .lang {
-  margin: 15px 15px 0 0;
+  margin: 7px 0 3px 15px;
+  border-left: solid 1px $color__text-main;
+}
+
+div.lang
+  div.wpml-ls-statics-shortcode_actions.wpml-ls.wpml-ls-legacy-list-vertical
+  ul {
+  display: block;
+}
+.wpml-ls-first-item a {
+  border-bottom: solid 1px $color__text-main;
 }
 
 .phone {
@@ -83,7 +93,7 @@ video {
 .lang a:visited,
 .lang a:hover {
   color: $color__text-invert;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .main-navigation a.wpml-ls-link {
@@ -215,7 +225,9 @@ video {
   }
 }
 
-.services {
+.services,
+.whyus,
+.contact {
   display: flex;
   margin: 30px 0;
   flex-wrap: wrap;
@@ -226,15 +238,52 @@ video {
   width: 33.3%;
 }
 
+.whyus-item {
+  overflow: hidden;
+  width: 30%;
+  text-align: center;
+  border: solid 1px $color__text-main;
+  margin-right: 5%;
+  background-color: $color__text-main;
+  color: $color__background-body;
+  border-radius: 5px;
+}
+
+.whyus-item:last-child {
+  margin: 0;
+}
+
+.whyus-header {
+  padding: 20px 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.whyus-text {
+  padding: 0 20px 20px 20px;
+}
+
+.contact-item {
+  overflow: hidden;
+  width: 50%;
+  padding: 20px;
+}
+
 .services-img {
   float: left;
-  width: 70px;
-  height: 70px;
+  width: 120px;
+  height: 120px;
   margin-right: 20px;
 }
 
 .services-text {
   margin-right: 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+div.services-item a div.services-text :visited {
+  text-decoration: none;
 }
 
 .anim-show.left {
@@ -279,6 +328,17 @@ video {
     width: 40px;
     height: 40px;
     margin-right: 20px;
+  }
+
+  .whyus-item {
+    width: 100%;
+    margin-bottom: 14px;
+    margin-right: 0;
+  }
+  .contact-item {
+    width: 100%;
+    margin-bottom: 14px;
+    margin-right: 0;
   }
 }
 
@@ -328,8 +388,11 @@ video {
   height: 400px;
   font-size: 16px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 22px;
   overflow: hidden;
+  span {
+    font-weight: 400;
+  }
 }
 
 .block-image-items .item {
@@ -537,7 +600,7 @@ h3.heading {
 
 .block-news {
   background-color: $color__background-ins;
-  height: 150px;
+  height: auto;
   h3.heading {
     color: $color__text-invert;
   }
@@ -545,4 +608,59 @@ h3.heading {
 
 div.container div.logo-menu img {
   height: 50px;
+}
+
+.entry-header.portfolio {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  min-height: 25vh;
+  position: relative;
+  h1 {
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.entry-header.portfolio:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.big-text {
+  font-size: 125%;
+  font-weight: 800;
+}
+div.contact-item a {
+  text-decoration: none;
+  color: $color__text-main;
+  font-weight: 700;
+}
+
+div.contact-item a img {
+  height: 50px;
+  width: 50px;
+  filter: invert(22%) sepia(2%) saturate(18%) hue-rotate(337deg) brightness(29%)
+    contrast(88%);
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.posted-on a {
+  text-decoration: none;
+}
+
+.entry-title a {
+  text-decoration: none;
+  font-size: 28px;
 }

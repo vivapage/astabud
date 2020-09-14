@@ -19,40 +19,56 @@ get_header();
   <div class="container">
     <div class="services anim-items down anim-show">
       <div class="services-item">
-        <a href="#">
-          <div class="services-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/complex.svg" alt="">
-          </div>
-        </a>
-        <div class="services-text">
-          <?php _e('COMPREHENSIVE REPAIR', 'astabud'); ?>
+        <div class="services-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/service-01.svg" alt="">
         </div>
-
+        <div class="services-text">
+          <?php _e('Capital and cosmetic repair of commercial facilities and residential real estate.', 'astabud'); ?>
+        </div>
       </div>
       <div class="services-item">
-        <a href="#">
-          <div class="services-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/tekush.svg" alt="">
-          </div>
-        </a>
-        <div class="services-text">
-          <?php _e('MAINTENANCE', 'astabud'); ?>
+        <div class="services-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/service-02.svg" alt="">
         </div>
-
+        <div class="services-text">
+          <?php _e('Capital construction civil and industrial objects', 'astabud'); ?>
+        </div>
       </div>
       <div class="services-item">
-        <a href="#">
-          <div class="services-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/izgot.svg" alt="">
-          </div>
-        </a>
-        <div class="services-text">
-          <?php _e('PRODUCT MANUFACTURING', 'astabud'); ?>
+        <div class="services-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/service-03.svg" alt="">
         </div>
-
+        <div class="services-text">
+          <?php _e('Design and installation of engineering systems; Electrical work', 'astabud'); ?>
+        </div>
       </div>
     </div>
-
+    <div class="services anim-items anim-show down">
+      <div class="services-item">
+        <div class="services-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/service-04.svg" alt="">
+        </div>
+        <div class="services-text">
+          <?php _e('Architectural design; Interior design.', 'astabud'); ?>
+        </div>
+      </div>
+      <div class="services-item">
+        <div class="services-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/service-05.svg" alt="">
+        </div>
+        <div class="services-text">
+          <?php _e('Technical supervision construction projects', 'astabud'); ?>
+        </div>
+      </div>
+      <div class="services-item">
+        <div class="services-img">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/service-06.svg" alt="">
+        </div>
+        <div class="services-text">
+          <?php _e('General construction works; Road works', 'astabud'); ?>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="block-image">
     <div class="container">

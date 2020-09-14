@@ -48,9 +48,10 @@
               )
             );
             ?>
-            <div class="lang"><?php do_action('wpml_add_language_selector'); ?>
-            </div>
+
             <div class="phone">+38 (067) 33 47 353
+            </div>
+            <div class="lang"><?php do_action('wpml_add_language_selector'); ?>
             </div>
           </div>
 
